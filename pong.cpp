@@ -239,7 +239,7 @@ namespace Pong
             glutKeyboardFunc(keyboard);
             glutSpecialFunc(NULL);
             PlaySoundW(NULL, NULL, 0);
-            PlaySoundW(L"music/joyboy.wav", NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
+            PlaySoundW(L"music/menu.wav", NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
             break;
         case 'w':
             if (player1PositionY < 0.9f)
