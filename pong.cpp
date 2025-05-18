@@ -9,7 +9,6 @@
 
 namespace Pong
 {
-    // Game variables
     float player1PositionY = 0.0f;
     float player2PositionY = 0.0f;
     float ballPositionX = 0.0f;
@@ -20,13 +19,11 @@ namespace Pong
     int scorePlayer1 = 0;
     int scorePlayer2 = 0;
 
-    // Texture IDs
     GLuint luffyTexture;
     GLuint zoroTexture;
     GLuint buggyTexture;
     GLuint backgroundTexture;
 
-    // Window dimensions
     const int PONG_WIDTH = 800;
     const int PONG_HEIGHT = 600;
 
@@ -204,10 +201,8 @@ namespace Pong
         glClear(GL_COLOR_BUFFER_BIT);
         glLoadIdentity();
 
-        // Draw background
         drawTexturedRect(0.0f, 0.0f, 1.0f, 1.0f, backgroundTexture);
 
-        // Draw center dashed line
         glColor3f(1.0f, 1.0f, 1.0f);
         glBegin(GL_LINES);
         for (float y = 0.0f; y < 1.0f; y += 0.05f)
@@ -217,7 +212,6 @@ namespace Pong
         }
         glEnd();
 
-        // Draw game objects
         drawTexturedRect(0.1f, player1PositionY - 0.1f, 0.2f, 0.2f, zoroTexture);
         drawTexturedRect(0.8f, player2PositionY - 0.1f, 0.2f, 0.2f, luffyTexture);
         drawTexturedRect(ballPositionX - 0.05f, ballPositionY - 0.05f, 0.1f, 0.1f, buggyTexture);

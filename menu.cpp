@@ -8,7 +8,7 @@
 #include "xo.h"
 #include "memory_game.h"
 #include "flappy.h"
-#include "pong.h" // Include our new Pong header
+#include "pong.h" 
 using namespace std;
 
 enum Screen
@@ -188,7 +188,7 @@ void runFlappy()
 
 void runPong()
 {
-    resize(800, 600); // Set the window size for Pong
+    resize(800, 600); 
     glClear(GL_COLOR_BUFFER_BIT);
     Pong::runPongGame();
 }
